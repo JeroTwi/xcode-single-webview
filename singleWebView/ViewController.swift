@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let url = NSURL(string: "http://www.google.com")
         let requestObj = NSURLRequest(URL: url!)
+        myWebView.mediaPlaybackRequiresUserAction=false
         myWebView.loadRequest(requestObj)
     }
 
