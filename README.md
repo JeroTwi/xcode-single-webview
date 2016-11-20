@@ -3,14 +3,14 @@ An xcode project that with single webview(UIWebView) that opens external URL, fo
 
 - Swift
 - Constrains ready. Fullscreen view with hidden status bar.
-- The default URL has been set to "http://www.google.com".
+- The default URL has been set to "http://www.youtube.com".
 - In Info.plist, the `Allow Arbitrary Loads` Key has been set to `YES`, so that it supports `http://` links. If you want to support secure `https://` links only, please set it to `NO`.
 
 #### Customize the URL
 Please go to ViewController.swift and change the URL string to your expected URL.
 
 ```swift
-        let url = NSURL(string: "http://www.google.com") // Customize your URL here
+        let url = NSURL(string: "http://www.youtube.com") // Customize your URL here
 ```
 
 #### Turn On Status Bar
@@ -21,3 +21,6 @@ By default, the Status Bar is turned off. you will see the web in fullscreen vie
                 return true // Change 'true' to 'false' here
         }
 ```
+
+#### Other customizations
+Caching for the URL is disabled and the 'mediaPlaybackRequiresUserAction' is set to false to enable HTML autoplay (comes in handy on IOS 9.3 and lower).
