@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var myWebView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = NSURL(string: "http://www.google.com")
-        let requestObj = NSURLRequest(URL: url!)
+        let url = NSURL(string: "http://www.youtube.com")
+        let requestObj = URLRequest(url: url!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
         myWebView.mediaPlaybackRequiresUserAction=false
         myWebView.loadRequest(requestObj)
     }
@@ -28,4 +28,3 @@ class ViewController: UIViewController {
         return true
     }
 }
-
